@@ -19,4 +19,4 @@
 ![Random Rotation](https://github.com/Kartowe4ka/DataScienceFifthHomework/blob/main/plots/RandomRotation.png)
 
 ### RandomGrayscale
-![FCN модель](https://github.com/Kartowe4ka/DataScienceFourthHomework/blob/main/plots/1.1(FCN).png)
+![Random Grayscale](https://github.com/Kartowe4ka/DataScienceFifthHomework/blob/main/plots/RandomGrayscale.png)
