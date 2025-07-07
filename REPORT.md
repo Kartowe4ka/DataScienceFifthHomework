@@ -11,7 +11,7 @@
 ![Horizontal Flip](https://github.com/Kartowe4ka/DataScienceFifthHomework/blob/main/plots/HorizontalFlip.png)
 
 ### RandomCrop
-![FCN модель](https://github.com/Kartowe4ka/DataScienceFourthHomework/blob/main/plots/1.1(FCN).png)
+![Random Crop](https://github.com/Kartowe4ka/DataScienceFifthHomework/blob/main/plots/RandomCrop.png)
 
 ### ColorJitter
 ![FCN модель](https://github.com/Kartowe4ka/DataScienceFourthHomework/blob/main/plots/1.1(FCN).png)
