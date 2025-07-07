@@ -1,0 +1,56 @@
+from torchvision import transforms
+from datasets import CustomImageDataset
+from utils import show_single_augmentation
+
+
+root = 'data/train'
+dataset = CustomImageDataset(root, transform=None, target_size=(224, 224))
+
+# Берем одно изображение для демонстрации
+original_img, label = dataset[0]
+class_names = dataset.get_class_name()
+
+
+# HorizontalFlip
+horizontalFlip_aug = transforms.Compose([
+    transforms.ToTensor(),
+    transforms.RandomHorizontalFlip(p=1.0),
+])
+horizontalFlip_img = horizontalFlip_aug(original_img)
+show_single_augmentation(original_img, horizontalFlip_img, 'HorizontalFlip')
+
+
+# RandomCrop
+randomCrop_aug = transforms.Compose([
+    transforms.ToTensor(),
+    transforms.RandomCrop(200, padding=20),
+])
+randomCrop_img = randomCrop_aug(original_img)
+show_single_augmentation(original_img, randomCrop_img, 'RandomCrop')
+
+
+# ColorJitter
+colorJitter_aug = transforms.Compose([
+    transforms.ToTensor(),
+    transforms.ColorJitter(brightness=0.5, contrast=0.5, saturation=0.5, hue=0.1)
+])
+colorJitter_img = colorJitter_aug(original_img)
+show_single_augmentation(original_img, colorJitter_img, 'ColorJitter')
+
+
+# RandomRotation
+randomRotation_aug = transforms.Compose([
+    transforms.ToTensor(),
+    transforms.RandomRotation(degrees=30),
+])
+randomRotation_img = randomRotation_aug(original_img)
+show_single_augmentation(original_img, randomRotation_img, 'RandomRotation')
+
+
+# RandomGrayscale
+randomGrayscale_aug = transforms.Compose([
+    transforms.ToTensor(),
+    transforms.RandomGrayscale(p=1.0),
+])
+randomGrayscale_img = randomGrayscale_aug(original_img)
+show_single_augmentation(original_img, randomGrayscale_img, 'RandomGrayscale')
